@@ -21,7 +21,7 @@ var init = function (window) {
         
         // TODO 1 : Declare and initialize our variables
         var circle;
-        var circle = [];
+        var circles = [];
 
 
         // TODO 2 : Create a function that draws a circle 
@@ -29,14 +29,14 @@ var init = function (window) {
             circle = draw.randomCircleInArea(canvas, true, true, '#999' , 2);
             physikz.addRandomVelocity(circle, canvas);
             view.addChild(circle);
-            circle.push(circle)
+            circles.push(circles)
         }
 
 
         // TODO 3 / 7 : Call the drawCircle() function 
         for(var count = 0; count < 100; count++) {
             drawCirle();
-
+        }
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -64,7 +64,7 @@ var init = function (window) {
         };
            
             
-        }
+        
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -87,6 +87,7 @@ var init = function (window) {
             }
             if(circle.y > canvas.hight) {
                 circle.y = 0;
+            }
                
 
 
